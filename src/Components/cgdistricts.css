@@ -1,0 +1,453 @@
+/* Base Styles with Montserrat Font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --primary: #2563eb;
+  --primary-dark: #1d4ed8;
+  --secondary: #059669;
+  --dark: #1e293b;
+  --light: #f8fafc;
+  --gray: #94a3b8;
+  --gray-light: #e2e8f0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.cg-districts-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--light);
+}
+
+/* Header Styles */
+.districts-header {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: white;
+  padding: 2rem 2rem 3rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.districts-header::after {
+  content: '';
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: var(--light);
+  transform: skewY(-2deg);
+  z-index: 1;
+}
+
+.header-content {
+  max-width: 1200px;
+  position: relative;
+  z-index: 2;
+}
+
+.header-top-row {
+  margin-bottom: 2.5rem;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(5px);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-right: auto;
+}
+
+.back-button:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateX(-5px);
+}
+
+.back-button svg {
+  font-size: 1.1rem;
+  transition: transform 0.3s ease;
+}
+
+.back-button:hover svg {
+  transform: translateX(-3px);
+}
+
+.title-section {
+  flex: 1;
+  min-width: 300px;
+  max-width: 800px;
+}
+
+.page-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 0.75rem;
+  line-height: 1.2;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.page-subtitle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.15rem;
+  opacity: 0.9;
+  margin: 0;
+  font-weight: 400;
+  max-width: 600px;
+}
+
+.stats-container {
+  display: flex;
+  margin-left: 230px;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.stat-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(5px);
+  padding: 1.25rem 1.75rem;
+  border-radius: 12px;
+  min-width: 180px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.stat-icon {
+  font-size: 1.75rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.stat-number {
+  font-size: 1.75rem;
+  font-weight: 700;
+  display: block;
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  opacity: 0.85;
+  display: block;
+  margin-top: 0.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+}
+
+/* Main Content */
+.districts-main {
+  flex: 1;
+  padding: 3rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.search-filter {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.search-input {
+  flex: 1;
+  min-width: 250px;
+  padding: 0.85rem 1.5rem;
+  border: 1px solid var(--gray-light);
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  font-family: 'Montserrat', sans-serif;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.filter-select {
+  padding: 0.85rem 1.25rem;
+  border: 1px solid var(--gray-light);
+  border-radius: 10px;
+  font-size: 1rem;
+  background-color: white;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  min-width: 200px;
+  transition: all 0.3s ease;
+}
+
+.filter-select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.districts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.district-card {
+  background: white;
+  border-radius: 15px;
+  padding: 1.75rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  border: 1px solid var(--gray-light);
+  display: flex;
+  flex-direction: column;
+}
+
+.district-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+  border-color: var(--primary);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.district-icon {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.district-name {
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--dark);
+  margin: 0;
+}
+
+.card-stats {
+  margin: 1.25rem 0;
+  font-size: 1rem;
+  color: var(--gray);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.water-stat {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+}
+
+.water-stat svg {
+  color: var(--primary);
+}
+
+.district-button {
+  margin-top: auto;
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 0.85rem;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  box-shadow: 0 4px 8px rgba(37, 99, 235, 0.2);
+}
+
+.district-button:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(37, 99, 235, 0.3);
+}
+
+/* Footer Styles */
+.districts-footer {
+  background: var(--dark);
+  color: white;
+  padding: 2.5rem;
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  font-size: 0.9rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.footer-links a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .header-content,
+  .districts-main {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .districts-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .stat-card {
+    min-width: 160px;
+    padding: 1rem 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .districts-header {
+    padding: 1.75rem 1.5rem 2.5rem;
+  }
+  
+  .header-top-row {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .back-button {
+    margin-right: 0;
+    align-self: flex-start;
+  }
+  
+  .title-section {
+    text-align: center;
+    margin: 0 auto;
+  }
+  
+  .page-title {
+    font-size: 2rem;
+  }
+  
+  .stats-container {
+    justify-content: center;
+  }
+  
+  .districts-main {
+    padding: 2rem 1.5rem;
+  }
+  
+  .search-filter {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .search-input,
+  .filter-select {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .districts-header {
+    padding: 1.5rem 1rem 2rem;
+  }
+  
+  .page-title {
+    font-size: 1.75rem;
+  }
+  
+  .page-subtitle {
+    font-size: 1rem;
+  }
+  
+  .stat-card {
+    flex: 1 0 100%;
+    text-align: center;
+    justify-content: center;
+  }
+  
+  .stat-icon {
+    display: none;
+  }
+  
+  .districts-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .district-card {
+    padding: 1.5rem;
+  }
+  
+  .districts-footer {
+    padding: 2rem 1rem;
+  }
+  
+  .footer-links {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
