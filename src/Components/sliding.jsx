@@ -65,7 +65,7 @@ const Sliding = () => {
           <div key={slide.id} className="sliding-slide">
             <div className="sliding-content">
               <div className="sliding-text-content">
-                <h3 className="sliding-subtitle">Central India Water</h3>
+                <h3 className="sliding-subtitle">Central India Water Portal</h3>
                 <h1 className="sliding-title">{slide.title}</h1>
                 <p className="sliding-description">{slide.description}</p>
                 <button className="sliding-button">Learn More</button>

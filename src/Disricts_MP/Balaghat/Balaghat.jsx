@@ -1,4 +1,6 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import { IoArrowBack } from 'react-icons/io5';
 import './Balaghat.css';
 import AM from './BALAGHAT (2).png';
 import AM1 from './Balaghat (1).png';
@@ -7,8 +9,20 @@ import picture1 from './Picture1_Bala.png';
 import picture2 from './Picture2_Bala.png';
 
 const Balaghat= () => {
+  const navigate = useNavigate();
+
+  const handleBackClick = () => {
+    navigate('/districts/mp');
+  };
+
   return (
     <div className='ali-body'>
+      {/* Back Arrow */}
+      <div className="back-arrow-container">
+        <button onClick={handleBackClick} className="back-arrow-button">
+          <IoArrowBack />
+        </button>
+      </div>
 
     <div className="container">
       <div className="header">
