@@ -65,7 +65,7 @@ const Indore = () => {
             
             <p>Average humidity ranges between <strong>53% and 66%</strong>, highest in August.</p>
             
-            <p>The region occasionally faces drought conditions — severe droughts occur roughly once in 50 years, and moderate ones about once every 7 years. Periods of excessive rainfall also affect agriculture and water availability.</p>
+            <p>The region occasionally faces drought conditions severe droughts occur roughly once in 50 years, and moderate ones about once every 7 years. Periods of excessive rainfall also affect agriculture and water availability.</p>
 
             {/* Groundwater Resources */}
             <h3 className="subsection-title">Groundwater Resources</h3>
