@@ -48,7 +48,7 @@ const Indore = () => {
 
             {/* River Systems */}
             <h3 className="subsection-title">River Systems</h3>
-            <p>Three seasonal rivers — <strong>Kshipra, Khan, and Gambhir</strong> — flow from south to north, eventually joining the Chambal River system. The Khan River passes through Indore city and carries both monsoon runoff and urban wastewater. These rivers flow actively during the monsoon but nearly dry up in the summer months, offering limited groundwater recharge.</p>
+            <p>Three seasonal rivers <strong>Kshipra, Khan, and Gambhir</strong> flow from south to north, eventually joining the Chambal River system. The Khan River passes through Indore city and carries both monsoon runoff and urban wastewater. These rivers flow actively during the monsoon but nearly dry up in the summer months, offering limited groundwater recharge.</p>
 
             {/* Climate */}
             <h3 className="subsection-title">Climate</h3>
