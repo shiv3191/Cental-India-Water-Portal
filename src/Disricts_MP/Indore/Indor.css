@@ -66,6 +66,11 @@
     border-radius: 2px;
 }
 
+/* Hydrology Section Specific Styles */
+.hydrology-title::before {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+}
+
 /* LULC Section Specific Styles */
 .lulc-section-title::before {
     background: linear-gradient(135deg, #27ae60, #2ecc71);
@@ -99,9 +104,44 @@
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-.basic-info p{
+.basic-info p {
     margin-bottom: 12px;
     font-size: 16px;
+}
+
+/* Hydrology Content Styles */
+.hydrology-content {
+    color: #444;
+    line-height: 1.8;
+}
+
+.hydrology-content p {
+    margin-bottom: 15px;
+}
+
+.subsection-title {
+    font-size: 1.3rem;
+    color: #2c3e50;
+    margin-top: 25px;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+/* Simple List Styles */
+.simple-list {
+    list-style: disc;
+    padding-left: 25px;
+    margin: 10px 0 15px 0;
+}
+
+.simple-list li {
+    margin: 8px 0;
+    color: #444;
+    line-height: 1.6;
+}
+
+.simple-list li strong {
+    color: #2c3e50;
 }
 
 /* Enhanced Water Analysis Section Styles */
@@ -196,7 +236,7 @@
     gap: 30px;
     align-items: start;
     position: relative;
-    flex-direction: row-reverse; /* Different layout - info first, then image */
+    flex-direction: row-reverse;
 }
 
 .lulc-info {
@@ -242,7 +282,6 @@
     margin-bottom: 8px;
 }
 
-/* Color-specific category title classes */
 .lulc-category-title.cropland { color: #DA70D6; }
 .lulc-category-title.tree-cover { color: #228B22; }
 .lulc-category-title.grassland { color:#a0a051; }
@@ -272,72 +311,14 @@
     transition: width 0.3s ease;
 }
 
-.lulc-fill.tree-cover {
-    background: #228B22;
-}
-
-.lulc-fill.shrubland {
-    background: #FFA500;
-}
-
-.lulc-fill.grassland {
-    background: #FFFF00;
-}
-
-.lulc-fill.cropland {
-    background: #DA70D6;
-}
-
-.lulc-fill.built-up {
-    background: #FF0000;
-}
-
-.lulc-fill.bare-vegetation {
-    background: #808080;
-}
-
-.lulc-fill.water-bodies {
-    background: #0000FF;
-}
-
-.lulc-fill.wetland {
-    background: #00CED1;
-}
-
-.lulc-summary {
-    background: rgba(255, 255, 255, 0.9);
-    padding: 20px;
-    border-radius: 10px;
-    border: 1px solid rgba(39, 174, 96, 0.3);
-    margin-top: 20px;
-}
-
-.lulc-summary-title {
-    font-weight: 600;
-    color: #27ae60;
-    margin-bottom: 10px;
-}
-
-.lulc-summary-text {
-    color: #555;
-    font-size: 0.95rem;
-    line-height: 1.5;
-}
-
-.highlight-box {
-    background: rgba(231, 76, 60, 0.1);
-    padding: 20px;
-    border-radius: 10px;
-    margin-top: 20px;
-    border: 1px solid rgba(231, 76, 60, 0.2);
-}
-
-.highlight-text {
-    color: #c0392b;
-    font-weight: 600;
-    font-size: 0.95rem;
-    text-align: center;
-}
+.lulc-fill.tree-cover { background: #228B22; }
+.lulc-fill.shrubland { background: #FFA500; }
+.lulc-fill.grassland { background: #FFFF00; }
+.lulc-fill.cropland { background: #DA70D6; }
+.lulc-fill.built-up { background: #FF0000; }
+.lulc-fill.bare-vegetation { background: #808080; }
+.lulc-fill.water-bodies { background: #0000FF; }
+.lulc-fill.wetland { background: #00CED1; }
 
 .photo-cards-container {
     display: flex;
@@ -396,5 +377,10 @@
 
     .photo-cards-container {
         flex-direction: column;
+    }
+    
+    .subsection-title {
+        font-size: 1.1rem;
+        margin-top: 20px;
     }
 }
