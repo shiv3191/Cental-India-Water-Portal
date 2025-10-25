@@ -166,15 +166,6 @@ const Indore = () => {
             </div>
           </div>
           
-          {/* Two Simple Photo Cards */}
-          <div className="photo-cards-container">
-            <div className="photo-card">
-              <img src={picture1} alt="Photo 1" />
-            </div>
-            <div className="photo-card">
-              <img src={picture2} alt="Photo 2" />
-            </div>
-          </div>
         </div>
 
         {/* LULC Analysis Section */}
@@ -207,14 +198,14 @@ const Indore = () => {
                 </div>
                 
                 <div className="lulc-category">
-                  <div className="lulc-category-title built-up">Built-up Area - 234.43 km²</div>
+                  <div className="lulc-category-title built-up">Built-up - 234.43 km²</div>
                   <div className="lulc-bar">
                     <div className="lulc-fill built-up" style={{width: '6.0%'}}></div>
                   </div>
                 </div>
                 
                 <div className="lulc-category">
-                  <div className="lulc-category-title water-bodies">Permanent Water Bodies - 22.21 km²</div>
+                  <div className="lulc-category-title water-bodies">Water Bodies - 22.21 km²</div>
                   <div className="lulc-bar">
                     <div className="lulc-fill water-bodies" style={{width: '0.6%'}}></div>
                   </div>
